@@ -86,3 +86,37 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+
+let totalMonths = finances.length;
+console.log(`Total Months:  ${totalMonths}`);
+
+let netProfitLosses = 0;
+
+ for (var i = 0; i < finances.length; i++) {
+    netProfitLosses += finances[i][1];
+ }
+ console.log(`Total: $${netProfitLosses}`);
+
+ let previous = 0;
+
+ for (var j = 0; j < finances.length; j++) {
+    previous += finances[j - 1][1];
+ }
+ console.log(`${previous}`);
+
+
+//  var previous = finances[i - 1][1];
+//  console.log(previous);
+
+//  var total = netProfitLosses + previous;
+//  console.log(total);
+
+
+
+
+
+//  alert(`Financial Analysis
+//  ----------------------------------
+//  Total Months:  ${totalMonths}
+//  Total:  $${netProfitLosses}
+//  `)
