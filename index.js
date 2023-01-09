@@ -87,36 +87,46 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
+// The total number of months included in the dataset.
+
 let totalMonths = finances.length;
 console.log(`Total Months:  ${totalMonths}`);
 
+// The net total amount of Profit/Losses over the entire period.
+
 let netProfitLosses = 0;
 
- for (var i = 0; i < finances.length; i++) {
-    netProfitLosses += finances[i][1];
- }
- console.log(`Total: $${netProfitLosses}`);
+for (var i = 0; i < totalMonths; i++) {
+   netProfitLosses += finances[i][1];
+}
+console.log(netProfitLosses);
 
- let previous = 0;
+// The average of the changes in Profit/Losses over the entire period.
 
- for (var j = 0; j < finances.length; j++) {
-    previous += finances[j - 1][1];
- }
- console.log(`${previous}`);
+// You will need to track what the total change in profits are from month to month and then find the average.
+// (Total/Number of months)
 
+let totalChange = 0;
 
-//  var previous = finances[i - 1][1];
-//  console.log(previous);
+for (var i = 1; i < totalMonths; i++ ) {
+   totalChange += finances[i][1] - finances[i-1][1];
+}
+console.log(totalChange);
 
-//  var total = netProfitLosses + previous;
-//  console.log(total);
+let averageChanges = totalChange / 85;
 
+console.log(averageChanges)
 
+// The greatest increase in profits (date and amount) over the entire period.
 
+//  The greatest decrease in losses (date and amount) over the entire period.
+ 
+ 
+//  When you open your code in the browser your resulting analysis should look similar to the following
 
 
 //  alert(`Financial Analysis
 //  ----------------------------------
 //  Total Months:  ${totalMonths}
 //  Total:  $${netProfitLosses}
-//  `)
+//  `)  
