@@ -6,21 +6,23 @@ Console Finances Project
 ## Description 
 
 
-This JavaScript challenge console-finances project, presents a real-world situation and showcases my skills and talents in the development of JavaScript code. The aim is to create code for analyzing the financial records of a company. using iteration with conditionals and for loops.
+This JavaScript challenge console-finances project, presents a real-world situation and showcases my skills and talents in the development of JavaScript code. The aim is to create code for analyzing the financial records of a company. using iteration with conditionals, for loops and Math methods.
 
 
 ## Screenshot
 
-![](./images/Screenshot.png)
+![](./images/screenshot.png)
 
 
 
 ## Tech Stack
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flex-box
-- Bootstrap 4.3
+- JavaScript if and else if
+- For Loops
+- Math.round()method
+- Arrays
+- Variables
+- String Concatenation
 
 
 ## Links
