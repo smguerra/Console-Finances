@@ -11,7 +11,7 @@ This JavaScript challenge console-finances project, presents a real-world situat
 
 ## Screenshot
 
-![](./images/bootstportofolioscreeshot.png)
+![](./images/Screenshot.png)
 
 
 
