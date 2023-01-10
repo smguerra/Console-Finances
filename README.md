@@ -33,8 +33,8 @@ This JavaScript challenge console-finances project, presents a real-world situat
 ## Links
 
 
-- Project URL:  https://github.com/smguerra/Bootstrap-Portfolio
-- Live Site URL:  https://smguerra.github.io/Bootstrap-Portfolio/
+- Project URL:  https://github.com/smguerra/Console-Finances
+- Live Site URL:  https://smguerra.github.io/Console-Finances/
 
 
 ## Author
