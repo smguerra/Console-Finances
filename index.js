@@ -90,7 +90,6 @@ var finances = [
 // Code to log the total number of months included in the dataset.
 
 let totalMonths = finances.length;
-console.log(`Total Months: ${totalMonths}`);
 
 
 // Code to log the net total amount of Profit/Losses over the entire period.
@@ -100,38 +99,50 @@ let netProfitLosses = 0;
 for (var i = 0; i < totalMonths; i++) {
    netProfitLosses += finances[i][1];
 }
-console.log(`Total: ${netProfitLosses}`);
 
 
 // Code to track what the total change in profits are from month to month.
 
-let totalChange = 0;
+let monthChange = 0;
 
 for (var i = 1; i < totalMonths; i++ ) {
-   totalChange += finances[i][1] - finances[i-1][1];
+   monthChange += finances[i][1] - finances[i-1][1];
 }
-// console.log(totalChange);
 
 
 // Code to calculate the average of the changes in Profit/Losses over the entire period.
 
-let averageChanges = totalChange / 85;
-
-console.log(`Average Change: ${averageChanges}`);
-
-
-// The greatest increase in profits (date and amount) over the entire period.
+let averageChanges = monthChange / 85;
+var roundedAverage = Math.round(averageChanges * 100)/100;
 
 
+// The greatest increase and decrease in profits/losses (date and amount) over the entire period.
 
-//  The greatest decrease in losses (date and amount) over the entire period.
- 
+var firstIncrease = finances[1][1] - finances[0][1];
+var greatestIncrease = ["", firstIncrease];
+var greatestLoss = ["", firstIncrease];
+
+for (var i = 1; i < totalMonths; i++) {
+   var currentProfit = finances[i][1];
+   var priorProfit = finances[i-1][1];
+   var currentIncrease = currentProfit - priorProfit;
+   if (currentIncrease > greatestIncrease[1]) {
+      //console.log(greatestIncrease);
+      greatestIncrease = [finances[i][0], currentIncrease];
+   }
+   else if (currentIncrease < greatestLoss[1]) {
+      //console.log(greatestLoss);
+      greatestLoss = [finances[i][0], currentIncrease];
+   }
+}
+
  
 //  When you open your code in the browser your resulting analysis should look similar to the following
 
-
-//  alert(`Financial Analysis
-//  ----------------------------------
-//  Total Months:  ${totalMonths}
-//  Total:  $${netProfitLosses}
-//  `)  
+console.log("Financial Analysis\n"+
+"----------------------------\n"+
+"Total Months: " + totalMonths + "\n"+
+"Total: $" + netProfitLosses + "\n" +
+"Average  Change: $" + roundedAverage + "\n" +
+"Greatest Increase in Profits: " + greatestIncrease[0] + " ($" + greatestIncrease[1] + ")\n" +
+"Greatest Decrease in Profits: " + greatestLoss[0] + " ($" + greatestLoss[1] + ") ");
