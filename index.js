@@ -110,13 +110,13 @@ for (var i = 1; i < totalMonths; i++ ) {
 }
 
 
-// Code to calculate the average of the changes in Profit/Losses over the entire period.
+// code to calculate the average of the changes in Profit/Losses over the entire period.
 
 let averageChanges = monthChange / 85;
 var roundedAverage = Math.round(averageChanges * 100)/100;
 
 
-// The greatest increase and decrease in profits/losses (date and amount) over the entire period.
+// code to calculate the greatest increase and decrease in profits/losses (date and amount) over the entire period.
 
 var firstIncrease = finances[1][1] - finances[0][1];
 var greatestIncrease = ["", firstIncrease];
